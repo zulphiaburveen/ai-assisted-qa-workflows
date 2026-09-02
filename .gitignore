@@ -1,0 +1,20 @@
+# Virtual Environment
+.venv/
+
+# Environment Variables
+.env
+
+# Generated files
+generated/
+
+# Playwright reports
+playwright-report/
+test-results/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
