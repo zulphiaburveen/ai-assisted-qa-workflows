@@ -1,0 +1,6 @@
+SPECIFICATION = "specification"
+ANALYSIS = "analysis"
+TEST_CASES = "test_cases"
+EVALUATION = "evaluation"
+AUTOMATION = "automation"
+REVIEW = "review"
