@@ -1,13 +1,21 @@
 from pathlib import Path
 
 from utils.ai_client import AIClient
+from utils.logger import step, success
+from utils.artifact_names import (
+    SPECIFICATION,
+    REQUIREMENT_ANALYSIS,
+)
 
 
 class RequirementAnalyzer:
 
+    def __init__(self):
+        self.ai = AIClient()
+
     def run(self, state):
 
-        print("1. Reading specification...")
+        step("Reading specification...")
 
         specification = Path(
             "specifications/login.md"
@@ -15,12 +23,12 @@ class RequirementAnalyzer:
             encoding="utf-8"
         )
 
-        print("2. Specification loaded")
-
         state.add_artifact(
-            "specification",
+            SPECIFICATION,
             specification,
         )
+
+        success("Specification loaded")
 
         system_prompt = Path(
             "prompts/requirement_prompt.txt"
@@ -28,24 +36,20 @@ class RequirementAnalyzer:
             encoding="utf-8"
         )
 
-        print("3. Prompt loaded")
+        success("Requirement prompt loaded")
 
-        ai = AIClient()
+        step("Analysing requirements...")
 
-        print("4. Calling Ollama...")
-
-        analysis = ai.generate(
+        analysis = self.ai.generate(
             system_prompt=system_prompt,
             user_prompt=specification,
         )
 
-        print("5. AI response received")
-
         state.add_artifact(
-            "analysis",
+            REQUIREMENT_ANALYSIS,
             analysis,
         )
 
-        print("6. Analysis saved")
+        success("Requirement analysis generated")
 
         return state

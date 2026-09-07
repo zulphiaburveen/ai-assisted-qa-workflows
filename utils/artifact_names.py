@@ -1,0 +1,6 @@
+SPECIFICATION = "01_specification"
+REQUIREMENT_ANALYSIS = "02_requirement_analysis"
+TEST_CASES = "03_test_cases"
+TEST_EVALUATION = "04_test_evaluation"
+PLAYWRIGHT_AUTOMATION = "05_playwright_automation_ts"
+AUTOMATION_REVIEW = "06_automation_review"

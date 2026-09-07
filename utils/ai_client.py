@@ -1,5 +1,7 @@
 from ollama import chat
 
+from utils.logger import ai, success
+
 
 class AIClient:
 
@@ -9,7 +11,7 @@ class AIClient:
         user_prompt: str,
     ) -> str:
 
-        print("🤖 AI is analysing requirements...")
+        ai("Thinking...")
 
         response = chat(
             model="qwen3:latest",
@@ -26,6 +28,6 @@ class AIClient:
             ],
         )
 
-        print("✓ Requirement Analysis Complete")
+        success("AI response received")
 
         return response.message.content
