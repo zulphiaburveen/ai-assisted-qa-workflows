@@ -1,41 +1,48 @@
 # Login Screen Specification
 
+## Application
+
+URL:
+https://www.saucedemo.com
+
+---
+
 ## Functional Requirements
 
 FR-001
+
 User shall enter a username.
 
 FR-002
+
 User shall enter a password.
 
 FR-003
-Login button remains disabled until all mandatory fields are populated.
+
+User shall click the Login button.
 
 FR-004
-Invalid credentials shall display the message:
-"Invalid username or password."
+
+Invalid credentials shall display an appropriate error message.
 
 FR-005
-Successful login redirects the user to Dashboard.
+
+Successful login redirects the user to the Products page.
 
 ---
 
 ## UX Requirements
 
 Heading
-- Text: Welcome Back
-- Font: Inter
-- Size: 32px
-- Weight: Bold
+
+- Text: Swag Labs
+- Font: DM Mono
+- Size: 24px
+- Weight: 400
 
 Primary Button
-- Text: Login
-- Background: #0066FF
-- Text Colour: White
-- Border Radius: 8px
 
-Spacing
-- 24px vertical spacing between controls
+- Text: Login
 
 ---
 

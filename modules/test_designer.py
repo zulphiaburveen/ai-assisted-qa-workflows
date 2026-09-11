@@ -3,7 +3,7 @@ from pathlib import Path
 from utils.ai_client import AIClient
 from utils.logger import step, success
 from utils.artifact_names import (
-    TEST_CASES,
+    TEST_SCENARIOS,
     REQUIREMENT_ANALYSIS,
 )
 
@@ -38,7 +38,7 @@ class TestDesigner:
         )
 
         state.add_artifact(
-            TEST_CASES,
+            TEST_SCENARIOS,
             test_cases,
         )
 

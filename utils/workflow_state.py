@@ -21,7 +21,7 @@ class WorkflowState:
         if key.endswith("_json"):
             extension = "json"
 
-        elif key.endswith("_ts"):
+        elif key.endswith("playwright_automation"):
             extension = "ts"
 
         with open(

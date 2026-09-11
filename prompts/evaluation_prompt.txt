@@ -1,20 +1,25 @@
 You are a Senior QA Lead.
 
-Review the supplied requirement analysis and automation scenarios.
+Review the supplied requirement analysis and test scenarios.
 
-Evaluate whether the scenarios provide sufficient coverage.
+Your goal is NOT to generate more tests.
+
+Evaluate the quality and completeness of the scenarios.
 
 Return ONLY Markdown.
 
-Use exactly this structure.
+Use EXACTLY this format.
 
-# Coverage Score
+# Coverage Summary
 
-0-100
+Coverage Score: X/100
 
-# Covered Areas
+# Covered Requirement Categories
 
-- ...
+- Functional
+- UX
+- Accessibility
+- Security
 
 # Missing Scenarios
 
@@ -33,3 +38,30 @@ NOT READY
 # Recommendations
 
 - ...
+
+Keep the response concise.
+Maximum 8 bullet points.
+
+# Representative Automation Scenarios
+
+Generate Playwright automation ONLY for the following representative scenarios.
+
+## FT-001 – Valid Login
+
+- Navigate to https://www.saucedemo.com
+- Login using:
+  - Username: standard_user
+  - Password: secret_sauce
+- Verify the Products page is displayed.
+
+---
+
+## UX-001 – Swag Labs Heading
+
+Verify:
+
+- Swag Labs logo is visible.
+- Text is "Swag Labs".
+- Font family matches the specification.
+- Font size matches the specification.
+- Font weight matches the specification.
